@@ -23,6 +23,7 @@ jobs:
           # Tag of the image to analyse
           image-tag: my-vuln-application:latest
           # API token for Sysdig Scanning auth
+          sysdig-secure-url: https://us2.app.sysdig.com/secure
           sysdig-secure-token: ${{ secrets.KUBELAB_SECURE_API_TOKEN }}
           stop-on-failed-policy-eval: true
           stop-on-processing-error: true
