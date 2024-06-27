@@ -1,0 +1,28 @@
+name: Build and Scan
+
+on:
+  workflow_dispatch:
+
+jobs:
+  remote-scan-from-registry:
+    runs-on: ubuntu-latest
+
+    steps:
+      # This step checks out a copy of your repository.
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: |
+          docker build -t my-vuln-application:latest .
+
+      - name: Scan dummy-vuln-app from registry
+        id: scan
+        uses: sysdiglabs/scan-action@v4
+        with:
+          # Tag of the image to analyse
+          image-tag: my-vuln-application:latest
+          # API token for Sysdig Scanning auth
+          sysdig-secure-token: ${{ secrets.KUBELAB_SECURE_API_TOKEN }}
+          stop-on-failed-policy-eval: true
+          stop-on-processing-error: true
