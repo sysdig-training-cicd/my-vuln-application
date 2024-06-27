@@ -10,7 +10,7 @@ ENV AWS_SECRET_ACCESS_KEY my_key
 ENV AWS_DEFAULT_REGION my_region
 
 # Bad practice: Using a Package Manager in the image build
-RUN pip install -g requests
+RUN pip install requests
 
 # Bad practice: Using default user root
 ENTRYPOINT ["python", "./app.py"]
