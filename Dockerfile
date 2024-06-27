@@ -1,6 +1,8 @@
-FROM sysdiglabs/dummy-vuln-app:latest   # Insecure base image
+# Insecure base image
+FROM sysdiglabs/dummy-vuln-app:latest
 
-ADD . /foo    # Bad practice: Using ADD instead of COPY
+# Bad practice: Using ADD instead of COPY
+ADD . /foo
 
 # Bad practice: Exposing secrets in Environment Variables
 ENV AWS_ACCESS_KEY_ID foobar
