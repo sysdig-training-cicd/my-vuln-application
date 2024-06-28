@@ -15,14 +15,14 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t my-vuln-application:latest .
+          docker build -t myregistry/my-vuln-application:latest .
 
       - name: Scan my-vuln-application
         id: scan
-        uses: sysdiglabs/scan-action@v4
+        uses: sysdiglabs/scan-action@v5
         with:
           # Tag of the image to analyse
-          image-tag: sysdiglabs/dummy-vuln-app:latest
+          image-tag: myregistry/my-vuln-application:latest
           # API token for Sysdig Scanning auth
           sysdig-secure-url: https://us2.app.sysdig.com/secure
           sysdig-secure-token: ${{ secrets.KUBELAB_SECURE_API_TOKEN }}
@@ -35,3 +35,7 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: ${{ github.workspace }}/sarif.json
+
+      - name: Push to registry
+        run: |
+          docker push myregistry/my-vuln-application:latest
