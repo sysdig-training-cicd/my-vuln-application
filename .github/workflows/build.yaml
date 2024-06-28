@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  remote-scan-from-registry:
+  build-and-scan:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,7 +17,7 @@ jobs:
         run: |
           docker build -t my-vuln-application:latest .
 
-      - name: Scan dummy-vuln-app from registry
+      - name: Scan my-vuln-application
         id: scan
         uses: sysdiglabs/scan-action@v4
         with:
