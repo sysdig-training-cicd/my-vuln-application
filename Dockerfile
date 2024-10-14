@@ -6,7 +6,7 @@ ADD . /foo
 
 # Bad practice: Exposing secrets in Environment Variables
 ENV AWS_ACCESS_KEY_ID dsnfjnfjsfdn
-ENV AWS_SECRET_ACCESS_KEY hufehkdfsm
+ENV AWS_SECRET_ACCESS_KEY hufehkdfsmm
 ENV AWS_DEFAULT_REGION hello-southeast-2
 
 # Bad practice: Using a Package Manager in the image build
