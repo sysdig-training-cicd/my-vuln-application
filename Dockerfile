@@ -5,9 +5,9 @@ FROM sysdiglabs/dummy-vuln-app:latest
 ADD . /foo
 
 # Bad practice: Exposing secrets in Environment Variables
-ENV AWS_ACCESS_KEY_ID foobar
+ENV AWS_ACCESS_KEY_ID relieved_umbrella_31348
 ENV AWS_SECRET_ACCESS_KEY my_key
-ENV AWS_DEFAULT_REGION my_region
+ENV AWS_DEFAULT_REGION hello-southeast-2
 
 # Bad practice: Using a Package Manager in the image build
 RUN pip install requests
