@@ -2,10 +2,11 @@
 FROM sysdiglabs/dummy-vuln-app:latest
 
 # Bad practice: Using ADD instead of COPY
-ADD . /foo
+# ADD . /foo
+COPY . /foo
 
 # Bad practice: Exposing secrets in Environment Variables
-ENV AWS_ACCESS_KEY_ID foobar
+ENV AWS_ACCESS_KEY_ID pomegranate_couch_47906
 ENV AWS_SECRET_ACCESS_KEY my_key
 ENV AWS_DEFAULT_REGION my_region
 
