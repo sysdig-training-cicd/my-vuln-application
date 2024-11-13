@@ -1,6 +1,6 @@
 # Insecure base image
-#FROM sysdiglabs/dummy-vuln-app:latest
-FROM archlinux 
+FROM sysdiglabs/dummy-vuln-app:latest
+#FROM archlinux 
 
 # Bad practice: Using ADD instead of COPY
 ADD . /foo
