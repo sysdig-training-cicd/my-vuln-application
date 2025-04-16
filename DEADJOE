@@ -1,0 +1,27 @@
+
+*** These modified files were found in JOE when it aborted on Wed Apr 16 08:59:55 2025
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+quit
+
+*** File '(Unnamed)'
+/root/my-vuln-application/.git/COMMIT_EDITMSG
+
+*** File '/root/my-vuln-application/.git/COMMIT_EDITMSG'
+My init commwq!
+giot !
+:q!itdddq!q
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dynamic_bottle_1304
+# Changes to be committed:
+#	modified:   Dockerfile
+#
+
+*** File '* Startup Log *'
+Processing '/etc/joe/editorrc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/editorrc
