@@ -11,7 +11,6 @@ ENV AWS_DEFAULT_REGION my_region
 
 # Bad practice: Using a Package Manager in the image build
 RUN pip install requests
-RUN apt update && apt install -y sudo
 
 # Bad practice: Using default user root
 ENTRYPOINT ["python", "./app.py"]
