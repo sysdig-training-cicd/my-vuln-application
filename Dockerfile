@@ -2,15 +2,15 @@
 FROM sysdiglabs/dummy-vuln-app:latest
 
 # Bad practice: Using ADD instead of COPY
-ADD . /foo
+#ADD . /foo
 
 # Bad practice: Exposing secrets in Environment Variables
-ENV AWS_ACCESS_KEY_ID foobar
-ENV AWS_SECRET_ACCESS_KEY my_key
-ENV AWS_DEFAULT_REGION my_region
+#ENV AWS_ACCESS_KEY_ID tangerine_hat_60651
+#ENV AWS_SECRET_ACCESS_KEY my_key
+#ENV AWS_DEFAULT_REGION my_region
 
 # Bad practice: Using a Package Manager in the image build
-RUN pip install requests
+#RUN pip install requests
 
 # Bad practice: Using default user root
-ENTRYPOINT ["python", "./app.py"]
+#ENTRYPOINT ["python", "./app.py"]
