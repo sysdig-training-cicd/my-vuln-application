@@ -11,6 +11,7 @@ ENV AWS_DEFAULT_REGION my_region
 
 # Bad practice: Using a Package Manager in the image build
 RUN pip install requests
+RUN /bin/sh -c apk add curl:7.61.1-r1 bind-tools
 
 # Bad practice: Using default user root
 ENTRYPOINT ["python", "./app.py"]
