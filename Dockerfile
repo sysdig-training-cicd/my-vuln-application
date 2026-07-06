@@ -13,4 +13,5 @@ ENV AWS_DEFAULT_REGION my_region
 RUN pip install requests
 
 # Bad practice: Using default user root
+
 ENTRYPOINT ["python", "./app.py"]
