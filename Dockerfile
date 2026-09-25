@@ -2,7 +2,7 @@
 FROM sysdiglabs/dummy-vuln-app:latest
 
 # Bad practice: Using ADD instead of COPY
-ADD . /foo
+COPY . /foo
 
 # Bad practice: Exposing secrets in Environment Variables
 ENV AWS_ACCESS_KEY_ID navy_phone_35438
